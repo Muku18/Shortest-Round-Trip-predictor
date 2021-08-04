@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    margin:0px;
+    padding:0px;
+   }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+ .nav-items {
+      overflow: hidden;
+
+      position: fixed;
+      /* Set the navbar to fixed position */
+      top: 0;
+      /* Position the navbar at the top of the page */
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      color: white;
+      background-color: black;
+      font-family: 'Baloo Bhaina 2', cursive;
+      opacity: 0.7;
+
+
+    }
+
+    .nav-items li {
+      list-style: none;
+      margin: 10px 20px 10px 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .nav-items li a {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-items li a:hover {
+      color: grey;
+      text-decoration: underline;
+    }
+
+    /* .nav-items li a:visited{
+    color:grey;
+} */
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+  text-align:center;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+      .nav-items {
+      overflow: hidden;
+
+      position: fixed;
+      /* Set the navbar to fixed position */
+      top: 0;
+      /* Position the navbar at the top of the page */
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      color: white;
+      background-color: black;
+      font-family: 'Baloo Bhaina 2', cursive;
+      opacity: 0.7;
+
+
+    }
+
+    .nav-items li {
+      list-style: none;
+      margin: 10px 20px 10px 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .nav-items li a {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-items li a:hover {
+      color: grey;
+      text-decoration: underline;
+    }
+
+    /* .nav-items li a:visited{
+    color:grey;
+} */
+
+    footer {
+    display:flex;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background-color: gray;
+      color: white;
+      padding-top: 10px;
+      text-align: center;
+      padding-left:470px;
+
+    }
+        .icons{
+    display:flex;
+<!--    justify-content:center;-->
+    align-items:center;
+
+    }
+    .icons li{
+    margin-left: 10px;
+    list-style:none;
+    }
+      .icons li a{
+      color:white;
+      }
+
+
+<!--@media screen and (max-width: 650px) {-->
+<!--  .column {-->
+<!--    width: 100%;-->
+<!--    display: block;-->
+<!--  }-->
+<!--}-->
+</style>
+</head>
+<body>
+
+ <nav id="navbar">
+
+    <ul class="nav-items">
+      <li><h3>iTravels</h3></li>
+      <li><a href="{% url 'index' %}"><i class="fa fa-home w3-xxlarge"></i>&nbsp;Home</a></li>
+      <li><a href="#ct"><i class="fa fa-address-book" style="font-size:17px"></i>&nbsp;Contact</a></li>
+      <li><a href="/about"><i class="fa fa-user" style="font-size:17px"></i>&nbsp;About</a></li>
+      <li><a href="/working"><i class="	fa fa-lightbulb-o" style="font-size:17px"></i>&nbsp;Project</a></li>
+    </ul>
+
+  </nav>
+ <br>
+ <br>
+ <br>
+
+<div class="about-section">
+  <h1>  TEAM MAVERICS </h1>
+    <br>
+  <p>Code is like humor. When you have to explain it, it’s bad</p>
+<!--  <p></p>-->
+</div>
+ <br>
+ <br>
+ <br>
+
+<h2 style="text-align:center">Our Team</h2>
+ <br>
+ <br>
+ <br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+<!--      <img src="" alt="mk" style="width:100%">-->
+      <div class="container">
+          <br>
+        <h2>Mukesh Kumar</h2>
+          <br>
+        <p class="title">1CR19CS099</p>
+          <br>
+<!--        <p></p>-->
+        <p>muku19cs@cmrit.ac.in</p>
+          <br>
+        <p><button class="button">Contact</button></p>
+          <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<!--      <img src="" alt="nb" style="width:100%">-->
+      <div class="container">
+          <br>
+        <h2>Nishant B</h2>
+          <br>
+        <p class="title">1CR19CS112</p>
+          <br>
+<!--        <p></p>-->
+        <p>nitb19cs@cmrit.ac.in</p>
+          <br>
+        <p><button class="button">Contact</button></p>
+          <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<!--      <img src="" alt="mb" style="width:100%">-->
+      <div class="container">
+          <br>
+        <h2 >Mithun B</h2>
+          <br>
+        <p class="title">1CR19CS092</p>
+          <br>
+<!--        <p></p>-->
+        <p>mitb19cs@cmrit.ac.in</p>
+          <br>
+        <p><button class="button">Contact</button></p>
+          <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

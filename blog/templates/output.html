@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Baloo+Bhaina+2:wght@800&display=swap"
+        rel="stylesheet">
+
+    <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    }
+
+ body{
+     width:100%;
+
+<!--    background: url(/static/images/obg.jpg);-->
+    background-size: cover;
+    background-color:black;
+
+    background-repeat: no-repeat;
+    }
+.main{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+
+
+   }
+
+table{
+    width:50%;
+
+
+    }
+
+table, th, td {
+  border: 1px solid black;
+}
+.Mincost{
+    position:relative;
+}
+       .nav-items {
+      overflow: hidden;
+
+      position: fixed;
+      /* Set the navbar to fixed position */
+      top: 0;
+      /* Position the navbar at the top of the page */
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      color: white;
+      background-color: black;
+      font-family: 'Baloo Bhaina 2', cursive;
+      opacity: 0.7;
+<!--          margin: 0px;-->
+<!--    padding: 0px;-->
+
+
+    }
+
+    .nav-items li {
+      list-style: none;
+      margin: 10px 20px 10px 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .nav-items li a {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-items li a:hover {
+      color: grey;
+      text-decoration: underline;
+    }
+
+    /* .nav-items li a:visited{
+    color:grey;
+} */
+    </style>
+</head>
+<body>
+<!--<a href="#min"><button style="background-color:black;font-size:18px;color:white">Shortest Path</button></a>-->
+
+  <nav id="navbar">
+
+    <ul class="nav-items">
+      <li><h3>iTravels</h3></li>
+      <li><a href="{% url 'index' %}"><i class="fa fa-home w3-xxlarge"></i>&nbsp;Home</a></li>
+      <li><a href="% url 'ct' %}"><i class="fa fa-address-book" style="font-size:17px"></i>&nbsp;Contact</a></li>
+      <li><a href="/about"><i class="fa fa-user" style="font-size:17px"></i>&nbsp;About</a></li>
+      <li><a href="/working"><i class="	fa fa-lightbulb-o" style="font-size:17px"></i>&nbsp;Project</a></li>
+        <li><a href="#min">Shortest Path</a>
+</li>
+    </ul>
+
+  </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="main">
+
+
+
+
+<table>
+    <tr>
+        <th bgcolor="gray"><h3>Possible Paths</h3></th>
+    <th bgcolor="gray"><h3>Distance</h3></th>
+  </tr>
+
+  {% for key, value in pa.items %}
+    {% if key == "Mincost_path"%}
+
+    {% else %}
+        {% if value == pa.Mincost_path%}
+            <tr id = "min">
+                <th bgcolor="crimson"> {{ key }} </th>
+                <th bgcolor="crimson"> {{ value }} </th>
+            </tr>
+        {% else %}
+            <tr>
+                <th bgcolor="#f7f7ef"> {{ key }} </th>
+                <th bgcolor="#f7f7ef"> {{ value }} </th>
+            </tr>
+        {% endif %}
+    {% endif %}
+
+    {% endfor %}
+</table>
+
+</div>
+
+
+</body>
+</html>

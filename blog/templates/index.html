@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Baloo+Bhaina+2:wght@800&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    /* with the help of this selector properties applys on all */
+
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+    /* ******************Navigation Bar ************************* */
+
+
+    .bg-image {
+      width: 100%;
+      height: 600px;
+      background: url(/static/images/bg.jpg);
+      background-size: cover;
+
+      background-repeat: no-repeat;
+    }
+
+    .nav-items {
+      overflow: hidden;
+
+      position: fixed;
+      /* Set the navbar to fixed position */
+      top: 0;
+      /* Position the navbar at the top of the page */
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      color: white;
+      background-color: black;
+      font-family: 'Baloo Bhaina 2', cursive;
+      opacity: 0.7;
+
+
+    }
+
+    .nav-items li {
+      list-style: none;
+      margin: 10px 20px 10px 10px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .nav-items li a {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-items li a:hover {
+      color: grey;
+      text-decoration: underline;
+    }
+
+    /* .nav-items li a:visited{
+    color:grey;
+} */
+
+
+
+    /*************************************************************** */
+
+    #ptitle {
+
+      text-align: center;
+      color: white;
+      text-decoration: underline;
+
+    }
+
+     .wtsp{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      < !-- border: 2px solid red;
+      -->width: 85%;
+      margin: 40px;
+
+    }
+
+    .p1d {
+      text-align: justify;
+      padding: 15px;
+    }
+
+
+    .solh {
+      border: 0px solid red;
+      text-align: center;
+      margin-top: 40px;
+
+      font-family: 'Baloo Bhaina 2', cursive;
+    }
+
+    .s1 {
+      < !-- border: 2px solid red;
+      -->width: 80%;
+      margin-left: 50px;
+
+<!--      height: 170px;-->
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      < !-- align-items: center;
+      -->
+    }
+
+    .s2 {
+      < !-- border: 2px solid red;
+      -->width: 80%;
+      margin-left: 50px;
+
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      < !-- align-items: center;
+      -->
+    }
+
+    footer {
+    display:flex;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background-color: gray;
+      color: white;
+      padding-top: 10px;
+      text-align: center;
+      padding-left:470px;
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    #em {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .icons{
+    display:flex;
+<!--    justify-content:center;-->
+    align-items:center;
+
+    }
+    .icons li{
+    margin-left: 10px;
+    list-style:none;
+    }
+      .icons li a{
+      color:white;
+      }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+<!--    .line{-->
+<!--    width:33px;-->
+<!--    margin:3px 3px;-->
+<!--    height:4px;-->
+<!--    background-color:white;-->
+<!--    }-->
+    @media only screen and (max-width : 1000px){
+     .nav-items{
+<!--     flex-direction:column;-->
+     }
+     .wtsp{
+      flex-direction:column;
+     }
+     .w{
+     flex-direction:column;
+      flex-direction: column-reverse;
+     }
+     .solr{
+     display:flex;
+     flex-direction:column;
+     }
+    }
+<!--    .solr p{-->
+<!--    margin:40px;-->
+<!--    text-align:center;-->
+<!--    }-->
+
+.s1,.s2{
+margin:20px;
+}
+
+@media screen and (max-width: 600px) {
+     .nav-items{
+     flex-direction:column;
+     }
+
+    .bg-image {
+      width: 100%;
+      height: 300px;
+<!--      background: url(/static/images/bg.jpg);-->
+<!--      background-size: cover;-->
+
+<!--      background-repeat: no-repeat;-->
+    }
+    .solr p{
+    fontsize:16px;
+    }
+    .if{
+  width:250px;
+  height:230px;
+
+}
+
+}
+
+
+  </style>
+  <title>TSP</title>
+</head>
+
+<body>
+  {% load static %}
+  <nav id="navbar">
+
+    <ul class="nav-items">
+      <li><h3>iTravels</h3></li>
+      <li><a href="{% url 'index' %}"><i class="fa fa-home w3-xxlarge"></i>&nbsp;Home</a></li>
+      <li><a href="#ct"><i class="fa fa-address-book" style="font-size:17px"></i>&nbsp;Contact</a></li>
+      <li><a href="/about"><i class="fa fa-user" style="font-size:17px"></i>&nbsp;About</a></li>
+      <li><a href="/working"><i class="	fa fa-lightbulb-o" style="font-size:17px"></i>&nbsp;Project</a></li>
+    </ul>
+
+  </nav>
+
+
+  <div class="bg-image">
+    <div id="ptitle">
+
+    </div>
+
+  </div>
+
+
+
+  <div class="wtsp">
+
+    <div class="d1">
+      <p class="p1d" style="font-size:18px;">The Travelling Salesman Problem (TSP) is the challenge of finding the
+        shortest yet most
+        efficient route for a person to take given a list of specific destinations.
+        It is a well-known algorithmic problem in the fields of computer science and operations research.
+        There are obviously a lot of different routes to choose from, but finding the
+        best one—the one that will require the least distance or cost—is what mathematicians and computer scientists
+        have spent decades trying to solve for.
+        TSP has commanded so much attention because it’s so easy to describe yet so difficult to solve. In fact, TSP
+        belongs to the class of combinatorial optimization problems known as <b>NP-complete</b>.
+        This means that TSP is classified as <b>NP-hard</b> because it has no <b>“quick” </b>solution
+        and the complexity of calculating the best route will increase when you add
+        more destinations to the problem.
+      </p>
+    </div>
+    <img style="margin:20px;width:250px;height:200px;border-radius:5px;border:2px solid black;"
+      src="{% static 'images/images.jpg' %}" alt="My image">
+  </div>
+
+
+  <div class="wtsp w">
+
+    <img style="margin:20px;width:300px;height:250px;border-radius:5px;border:2px solid black;"
+      src="{% static 'images/tsp2.jpg' %}" alt="My image">
+<!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/CX0whwSKGYE?controls=0">-->
+<!--</iframe>-->
+
+
+
+
+
+
+    <div class="d1">
+      <p class="p1d" style="font-size:18px;">
+        The problem can be solved by analyzing every round-trip route to determine the shortest one.
+        However, as the number of destinations increases, the corresponding number of roundtrips surpasses the
+        capabilities
+        of even the fastest computers. With <b>10 destinations</b>, there can be more than
+        <b>300,000 roundtrip</b> permutations and combinations.
+        With <b>15 destinations</b>, the number of possible routes could exceed <b>87 billion.</b>
+        This optimization problem, which seeks the shortest (or least expensive) round trip through a collection of
+        cities, has applications ranging from DNA sequencing to ride-sharing logistics. Over the decades, it has
+        inspired many of the most fundamental advances in computer science, helping to illuminate
+        the power of techniques such as linear programming. But researchers have yet to fully explore its possibilities
+        — and not for want of trying.
+        Most computer scientists believe that there is no
+        algorithm that can efficiently find the best solutions for
+        all possible combinations of cities. But in 1976, Nicos Christofides came
+        up with an algorithm that efficiently finds approximate solutions — round trips
+        that are at most 50% longer than the best round trip. At the time,
+        computer scientists expected that someone would soon improve on Christofides’
+        simple algorithm and come closer to the true solution.
+
+      </p>
+    </div>
+
+  </div>
+
+  <hr>
+  <h2 class="solh"> Travelling Salesman problem Solutions</h2>
+  <div class="solr">
+  <div class="s1">
+    <div>
+    <h3 style="font-family: 'Baloo Bhaina 2', cursive;padding-left:20px;">The brute force Approach</h3>
+  </div>
+    <div>
+      <p style="font-size: 18px;margin:20px;  text-align: justify;">
+        The Brute Force approach, also known as the Naive Approach, calculates and compares all possible permutations of
+        routes or paths to determine the shortest unique solution. To solve the TSP using the Brute-Force approach, you
+        must calculate the total number of routes and then draw and list all the possible routes. Calculate the distance
+        of each route and then choose the shortest one—this is the optimal solution.&nbsp;<a href="https://iq.opengenus.org/travelling-salesman-problem-brute-force/" target="_blank"><b>Read more</b></a>
+      </p>
+    </div>
+  </div>
+
+  <div class="s1">
+
+    <h3 style="font-family: 'Baloo Bhaina 2', cursive;padding-left:20px;">The Branch and Bound Method</h3>
+    <div>
+      <p style="font-size: 18px;
+      text-align: justify;margin:20px; ">
+        This method breaks a problem to be solved into several sub-problems. It’s a system for solving a series of
+        sub-problems, each of which may have several possible solutions and where the solution selected for one problem
+        may have an effect on the possible solutions of subsequent sub-problems. To solve the TSP using the Branch and
+        Bound method, you must choose a start node and then set bound to a very large value (let’s say infinity). Select
+        the cheapest arch between the unvisited and current node and then add the distance to the current distance.
+        Repeat the process while the current distance is less then the bound. If the current distance is less than the
+        bound, you’re done. You may now add up the distance so that the bound will be equal to the current distance.
+        Repeat this process until all the arcs have been covered.&nbsp;<a href="https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/" target = "_blank"><b>Read more</b></a>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="s1">
+    <h3 style="font-family: 'Baloo Bhaina 2', cursive;padding-left:20px;">The Nearest Neighbor Method</h3>
+    <div>
+      <p style="font-size: 18px; margin:20px; text-align: justify;">
+        This is perhaps the simplest TSP heuristic. The key to this method is to always visit the nearest destination
+        and then go back to the first city when all other cities are visited. To solve the TSP using this method, choose
+        a random city and then look for the closest unvisited city and go there. Once you have visited all cities, you
+        must return to the first city.&nbsp;<a href="https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm" target="_blank"><b>Read more</b></a>
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <h2 class="solh">Real World Application</h2>
+  <div class="s2">
+
+    <div>
+      <p style="font-size: 18px;margin:20px;  text-align: justify;">
+        Despite the complexity of solving the Travelling Salesman Problem, it still finds applications in all verticals.
+
+        For instance, efficient solutions found through the TSP are being used in the last mile delivery. Last mile
+        delivery refers to the movement of goods from a transportation hub, such as a depot or a warehouse, to the end
+        customer’s choice of delivery. Last mile delivery is the leading cost driver in the supply chain. Companies
+        usually shoulder some of the costs to better compete in the market. In fact, a last mile delivery costs the
+        company an average of $10.1, but the customer only pays an average of $8.08. This is the reason why businesses
+        strive to minimize the cost of last mile delivery.
+      </p>
+    </div>
+
+<!--    <img style="margin:auto;width:350px;height:300px;border-radius:5px;border:2px solid black;"-->
+<!--      src="{% static 'images/img2.jpg' %}">-->
+    <iframe class = "if" style = "margin:auto;" width="350" height="300" src="https://www.youtube.com/embed/5rUQewuZr-A?autoplay=0&mute=1">
+</iframe>
+    <div>
+      <p style="font-size: 18px;margin:20px;  text-align: justify;">
+        The minimization of costs in last mile delivery is essentially a Vehicle Routing Problem (VRP). VRP is a
+        generalized version of the TSP and is one of the most widely studied problems in mathematical optimization. It
+        deals with finding a set of routes or paths to reduce delivery costs. The problem domain may involve a set of
+        depot locations, hundreds of delivery locations, and several vehicles. As with TSP, determining the best
+        solution to VRP is NP-hard, so the number of problems that can be solved, optimally, using combinatorial
+        optimization or mathematical programming may be limited. Thus, commercial solvers usually use heuristics—these
+        are like shortcuts for our brain, eliminating a lot of math or calculations for a quick and easy solution—due to
+        the frequency and size of real world VRPs they need to solve.
+      </p>
+    </div>
+  </div>
+  <hr>
+  <h2 style="Border:0px solid black;font-family: 'Baloo Bhaina 2';text-align:center;margin-top: 30px;">Contact Us</h2>
+  <br>
+
+  <div class="container" >
+    <form id="ct" action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Enter name ">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Enter last name ">
+
+      <label for="em">Mail id</label>
+      <input type="email" id="em" name="lastname" placeholder="Enter email">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">India</option>
+
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something" style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <br>
+  <br>
+
+
+
+  <footer >
+    <p><b>Copyright &copy; 2021 All Rights reserved.</b></p>
+    <ul class="icons">
+      <a href="https://www.instagram.com" target = "_blank"><li><i class="fa fa-instagram" style="font-size:17px;color:white"></i></li></a>
+       <a href="https://www.facebook.com" target = "_blank"><li><i class="fa fa-facebook-f" style="font-size:17px;color:white"></i></li></a>
+       <a href="https://twitter.com" target = "_blank"><li><i class="fa fa-twitter" style="font-size:17px;color:white"></i></li></a>
+       <a href="https://www.linkedin.com" target = "_blank"><li><i class="fa fa-linkedin-square" style="font-size:17px;color:white"></i></li></a>
+    </ul>
+  </footer>
+
+
+
+
+
+
+  <script type="text/javascript" src="/JS/home.js">
+
+
+  </script>
+</body>
+
+</html>
