@@ -7,8 +7,6 @@ from itertools import permutations
 def index(request):
     return render(request,'index.html')
 
-def abt(request):
-    return render(request,'about.html')
 
 def work(request):
     return render(request,'working.html')
